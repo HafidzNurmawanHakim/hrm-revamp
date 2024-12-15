@@ -1,0 +1,6 @@
+{
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"editor.detectIndentation": false, // Matikan pendeteksian otomatis
+	"editor.tabSize": 4, // Ukuran tab
+	"editor.insertSpaces": false // Gunakan tab, bukan spasi
+}

@@ -17,6 +17,7 @@ export default {
 			satoshi: ["Satoshi", "sans-serif"],
 		},
 		screens: {
+			"pre-lg": "820px",
 			"2xsm": "375px",
 			xsm: "425px",
 			"3xl": "2000px",
@@ -346,5 +347,9 @@ export default {
 			},
 		},
 	},
-	plugins: [nextui({}), require("tailwindcss-animate")],
+	plugins: [
+		nextui({}),
+		require("tailwindcss-animate"),
+		require("@tailwindcss/typography"),
+	],
 } satisfies Config;

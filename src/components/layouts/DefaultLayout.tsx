@@ -14,17 +14,15 @@ export default function DefaultLayout({
 		<>
 			<SidebarProvider>
 				{/* <!-- ===== Page Wrapper Start ===== --> */}
-				<div className="flex ">
+				<div className="flex w-full">
 					{/* <!-- ===== Sidebar Start ===== --> */}
 					<SidebarApp />
 					{/* <!-- ===== Sidebar End ===== --> */}
 
 					{/* <!-- ===== Main Content Start ===== --> */}
-					<main className="">
-						<SidebarTrigger />
-						<div className="mx-auto p-4 md:p-6 2xl:p-10">
-							{children}
-						</div>
+					<main className="relative p-4 md:p-6 2xl:p-10 w-full">
+						{/* <SidebarTrigger /> */}
+						{children}
 					</main>
 					{/* <!-- ===== Main Content End ===== --> */}
 				</div>

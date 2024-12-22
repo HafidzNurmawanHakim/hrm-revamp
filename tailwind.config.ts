@@ -5,12 +5,12 @@ import { nextui } from "@nextui-org/theme";
 const colors = require("tailwindcss/colors");
 
 export default {
-	content: [
-		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-		"./node_modules/@nextui-org/theme/dist/components/(button|switch|input).js",
-	],
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/components/(button|input|toggle|user|ripple|spinner|form|avatar).js"
+  ],
 	darkMode: "class",
 	theme: {
 		fontFamily: {

@@ -20,7 +20,7 @@ export default function DefaultLayout({
 					{/* <!-- ===== Sidebar End ===== --> */}
 
 					{/* <!-- ===== Main Content Start ===== --> */}
-					<main className="relative p-4 md:p-6 2xl:p-10 w-full">
+					<main className="relative p-4 md:p-6 2xl:p-10 w-full container max-w-7xl mx-auto">
 						{/* <SidebarTrigger /> */}
 						{children}
 					</main>

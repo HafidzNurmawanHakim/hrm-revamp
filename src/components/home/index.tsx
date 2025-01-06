@@ -26,7 +26,7 @@ function index() {
 				<DockNav />
 				{/* End Dock Navbar */}
 				<div className="w-full rounded-2xl h-40 overflow-hidden mt-4 relative">
-					<div className="absolute size-full h-1/2 top-0 left-0 text-white p-2 bg-gradient-to-bl from-[#86efac]/30 via-[#fcd34d]/30 to-[#f9a8d4]/30"></div>
+					<div className="absolute size-full h-full top-0 left-0 text-white p-2 bg-gradient-to-bl from-blue-300/30 to-purple-900/20"></div>
 					<div className="size-full absolute z-10 left top-0 flex justify-between">
 						<div>
 							<h2>Hafidz Nurmawan</h2>

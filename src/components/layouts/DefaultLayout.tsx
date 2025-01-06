@@ -1,9 +1,8 @@
 "use client";
-import React, { useState, ReactNode } from "react";
-import Header from "./Header";
-import { useAppContext } from "../context/AppContext";
+import React from "react";
 import { SidebarApp } from "./Sidebar";
-import { SidebarProvider, SidebarTrigger } from "../modules/Sidebar";
+import { SidebarProvider } from "../modules/Sidebar";
+import { Navbar } from "./Navbar";
 
 export default function DefaultLayout({
 	children,
@@ -20,9 +19,9 @@ export default function DefaultLayout({
 					{/* <!-- ===== Sidebar End ===== --> */}
 
 					{/* <!-- ===== Main Content Start ===== --> */}
-					<main className="relative p-4 md:p-6 2xl:p-10 w-full container max-w-7xl mx-auto">
-						{/* <SidebarTrigger /> */}
-						{children}
+					<main className="relative mt-16 w-full container max-w-7xl mx-auto bg-soft-gray">
+						<Navbar />
+						<div className="p-1.5 md:p-4">{children}</div>
 					</main>
 					{/* <!-- ===== Main Content End ===== --> */}
 				</div>

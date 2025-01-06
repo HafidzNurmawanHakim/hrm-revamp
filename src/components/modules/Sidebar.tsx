@@ -7,7 +7,6 @@ import { PanelLeft } from "lucide-react";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import { useResponsive } from "@/lib/hooks/useResponsive";
-import { cn } from "@nextui-org/theme";
 import { Sheet, SheetContent, SheetTitle } from "@/components/modules/Sheet";
 import { Skeleton } from "@/components/common/Skeleton";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
@@ -17,6 +16,7 @@ import {
 	TooltipTrigger,
 } from "@/components/modules/Tooltip";
 import VisuallyHidden from "./VisuallyHidden";
+import { cn } from "@/lib/utils/helper";
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;

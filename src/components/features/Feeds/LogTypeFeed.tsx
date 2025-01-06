@@ -1,3 +1,4 @@
+import { Separator } from "@/components/modules/Separator";
 import { Button } from "@nextui-org/button";
 import { User } from "@nextui-org/user";
 import { ArrowRight } from "lucide-react";
@@ -41,7 +42,16 @@ function LogTypeFeed() {
 								<h3 className="text-base text-black">
 									Awesome Projects
 								</h3>
-								<p>Tags | Task-23</p>
+								<div className="flex gap-2 items-center">
+									<p>Tags</p>
+									<Separator
+										orientation="vertical"
+										className="bg-default-300 h-4"
+									/>
+									<span className="text-[10px] py-[2px] px-2 rounded bg-success/10 text-success">
+										TASK-23
+									</span>
+								</div>
 							</div>
 							<div className="h-full mr-1">
 								<Button

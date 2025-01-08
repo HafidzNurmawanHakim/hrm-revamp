@@ -1,9 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import Overview from "@/components/features/overview";
 import DockNav from "@/components/features/dockNav";
+import { User } from "@nextui-org/user";
+import { days } from "@/lib/data/common";
+import { Button } from "@nextui-org/button";
+import { ArrowRight, Plus } from "lucide-react";
+import { RadialChart } from "../common/charts/RadialBarChart";
 
 const FeedsSection = dynamic(() => import("@/components/features/Feeds"), {
 	ssr: false,
@@ -25,21 +29,50 @@ function index() {
 				{/* Start Dock Navbar */}
 				<DockNav />
 				{/* End Dock Navbar */}
-				<div className="w-full rounded-2xl h-40 overflow-hidden mt-4 relative">
-					<div className="absolute size-full h-full top-0 left-0 text-white p-2 bg-gradient-to-bl from-blue-300/30 to-purple-900/20"></div>
-					<div className="size-full absolute z-10 left top-0 flex justify-between">
-						<div>
-							<h2>Hafidz Nurmawan</h2>
+				<div className="w-full rounded-2xl h-40 overflow-hidden mt-4 flex border">
+					<div className="flex-1 p-2.5 flex flex-col justify-around items-start">
+						<User
+							avatarProps={{
+								src: "https://i.pravatar.cc/150?u=a04258114e29026702d",
+							}}
+							description="Product Designer"
+							name="Jane Doe"
+						/>
+						<div className="flex flex-wrap justify-center gap-1.5">
+							{days
+								.filter((item) => !item.isWeekend)
+								.map((item, idx) => (
+									<div
+										className="p-1 bg-green-100 size-10 rounded-full text-green-700 flex items-center justify-center"
+										key={`days_${idx}`}
+									>
+										{item.name[0]}
+									</div>
+								))}
 						</div>
-						<div className="w-24 h-full flex items-center">
-							<Image
-								src={"/images/user/user-01.png"}
-								alt="user"
-								height={80}
-								width={80}
-								className="bg-white p-1 rounded-full"
-							/>
+						<div className="flex gap-1.5">
+							<Button
+								startContent={<Plus size={18} />}
+								size="sm"
+								radius="full"
+								color="success"
+								variant="flat"
+							>
+								Attendance
+							</Button>
+							<Button
+								size="sm"
+								radius="full"
+								color="primary"
+								variant="light"
+								endContent={<ArrowRight size={18} />}
+							>
+								See All
+							</Button>
 						</div>
+					</div>
+					<div className="w-40 bg-gradient-to-r from-transparent to-success-100 rounded-2xl h-full">
+						<RadialChart className="mx-auto aspect-square w-full h-full" />
 					</div>
 				</div>
 			</div>

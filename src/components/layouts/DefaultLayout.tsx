@@ -19,8 +19,7 @@ export default function DefaultLayout({
 					{/* <!-- ===== Sidebar End ===== --> */}
 
 					{/* <!-- ===== Main Content Start ===== --> */}
-					<main className="relative mt-16 w-full container max-w-7xl mx-auto bg-soft-gray">
-						<Navbar />
+					<main className="relative w-full container max-w-7xl mx-auto bg-background">
 						<div className="p-1.5 md:p-4">{children}</div>
 					</main>
 					{/* <!-- ===== Main Content End ===== --> */}

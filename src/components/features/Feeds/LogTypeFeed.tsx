@@ -39,7 +39,7 @@ function LogTypeFeed() {
 								className="rounded-lg"
 							/>
 							<div className="flex-1">
-								<h3 className="text-base text-black">
+								<h3 className="font-semibold text-black">
 									Awesome Projects
 								</h3>
 								<div className="flex gap-2 items-center">

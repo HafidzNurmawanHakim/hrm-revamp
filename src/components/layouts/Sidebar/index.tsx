@@ -8,7 +8,9 @@ import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
+	useSidebar,
 } from "@/components/modules/Sidebar";
+import { cn } from "@/lib/utils/helper";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 import Image from "next/image";
 
@@ -42,6 +44,7 @@ const items = [
 ];
 
 export function SidebarApp() {
+	const { open } = useSidebar();
 	return (
 		<Sidebar collapsible="icon">
 			<SidebarContent>
@@ -56,7 +59,9 @@ export function SidebarApp() {
 				</SidebarHeader>
 				<SidebarGroup>
 					<SidebarGroupLabel>Application</SidebarGroupLabel>
-					<SidebarGroupContent>
+					<SidebarGroupContent
+						className={cn(open ? "px-4" : "px-2.5")}
+					>
 						<SidebarMenu>
 							{items.map((item) => (
 								<SidebarMenuItem key={item.title}>

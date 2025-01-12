@@ -10,7 +10,7 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|input|user|ripple|spinner|form|avatar).js"
+    "./node_modules/@nextui-org/theme/dist/components/(button|input|progress|user|ripple|spinner|form|avatar).js"
   ],
 	darkMode: "class",
 	theme: {
@@ -68,6 +68,16 @@ export default {
 					"5": "hsl(var(--chart-5))",
 				},
 			},
+			keyframes: {
+				"accordion-down": {
+					from: { height: "0" },
+					to: { height: "var(--radix-accordion-content-height)" },
+				},
+				"accordion-up": {
+					from: { height: "var(--radix-accordion-content-height)" },
+					to: { height: "0" },
+				},
+			},
 			animation: {
 				linspin: "linspin 1568.2353ms linear infinite",
 				easespin:
@@ -86,6 +96,8 @@ export default {
 				line1: "line 10s infinite linear",
 				line2: "line-revert 8s infinite linear",
 				line3: "line 7s infinite linear",
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
 			},
 		},
 	},

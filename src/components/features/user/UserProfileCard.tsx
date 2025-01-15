@@ -20,7 +20,7 @@ function UserProfileCard() {
 						.filter((item) => !item.isWeekend)
 						.map((item, idx) => (
 							<div
-								className="p-1 bg-green-100 size-10 rounded-full text-green-700 flex items-center justify-center"
+								className="p-1 bg-green-100 size-8 xl:size-10 rounded-full text-green-700 flex items-center justify-center"
 								key={`days_${idx}`}
 							>
 								{item.name[0]}

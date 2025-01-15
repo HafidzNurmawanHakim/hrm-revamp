@@ -1,4 +1,5 @@
 import CustomBarChart from "@/components/common/charts/BarChart";
+import CustomLineChart from "@/components/common/charts/CustomLineChart";
 import { ChartConfig } from "@/components/modules/Chart";
 import { Button } from "@nextui-org/button";
 import { Plus, X } from "lucide-react";
@@ -46,7 +47,7 @@ function Index() {
 				<h3 className="font-light text-gray-400 text-sm">
 					Your Summary Activities
 				</h3>
-				<CustomBarChart
+				<CustomLineChart
 					config={chartConfig}
 					data={chartData}
 					className="w-full h-36"

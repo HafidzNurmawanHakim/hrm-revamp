@@ -10,7 +10,7 @@ import {
 } from "recharts";
 
 const chartData = [
-	{ browser: "safari", visitors: 98, fill: "var(--color-safari)" },
+	{ browser: "safari", visitors: 96, fill: "var(--color-safari)" },
 ];
 
 const chartConfig = {
@@ -33,7 +33,7 @@ export function RadialChart({ className }: ChartProps) {
 			<RadialBarChart
 				data={chartData}
 				startAngle={0}
-				endAngle={200}
+				endAngle={345}
 				innerRadius={50}
 				outerRadius={80}
 			>

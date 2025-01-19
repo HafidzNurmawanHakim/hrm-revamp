@@ -10,7 +10,7 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|input|progress|user|ripple|spinner|form|avatar).js"
+    "./node_modules/@nextui-org/theme/dist/components/(avatar|button|input|progress|user|ripple|spinner|form).js"
   ],
 	darkMode: "class",
 	theme: {

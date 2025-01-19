@@ -35,7 +35,7 @@ function UserProfileCard() {
 						color="success"
 						variant="flat"
 					>
-						Attendance
+						Check-In
 					</Button>
 					<Button
 						size="sm"

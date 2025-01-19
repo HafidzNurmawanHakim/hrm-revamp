@@ -30,6 +30,7 @@ function HighlightCard() {
 				type="single"
 				collapsible
 				className="w-full mt-2 space-y-2"
+				defaultValue="item-1"
 			>
 				<AccordionItem value="item-1" className="border-none">
 					<AccordionTrigger
@@ -105,8 +106,8 @@ function HighlightCard() {
 									showValueLabel
 								/>
 								<div className="flex justify-between">
-									<p className="text-danger bg-red-100 px-2 rounded-lg flex items-center gap-2.5">
-										<CalendarDays size={18} />
+									<p className="text-danger bg-red-100 px-2 rounded-lg flex text-xs items-center gap-2.5">
+										<CalendarDays size={16} />
 										Today
 									</p>
 									<Button
@@ -119,6 +120,55 @@ function HighlightCard() {
 								</div>
 							</div>
 						</div>
+					</AccordionContent>
+				</AccordionItem>
+				<AccordionItem value="item-2" className="border-none">
+					<AccordionTrigger
+						className="rounded-xl group w-full relative bg-soft-blue p-1.5 hover:no-underline flex items-center gap-3"
+						showIcon={false}
+					>
+						<Image
+							src={
+								"https://i.pravatar.cc/150?u=a04258114e29026702d"
+							}
+							alt="project-icon"
+							width={50}
+							height={50}
+							className="rounded-lg"
+						/>
+						<div className="flex-1">
+							<h3 className="text-black">
+								Awesome Projects
+								<span className="text-success mx-2">80%</span>
+							</h3>
+							<div className="flex gap-2 items-center max-w-[80%] mt-2">
+								<Progress
+									aria-label="Loading..."
+									size="sm"
+									value={80}
+									color="success"
+								/>
+							</div>
+						</div>
+						<Button
+							size="sm"
+							color="success"
+							variant="bordered"
+							className="mr-2 transform group-hover:-translate-x-8 z-10"
+							as={Link}
+							href="/projects"
+						>
+							Manage
+						</Button>
+
+						<div
+							role="button"
+							className="absolute right-4 scale-0 group-hover:scale-100 transition-scale duration-300"
+						>
+							<ChevronDown size={18} />
+						</div>
+					</AccordionTrigger>
+					<AccordionContent className="p-2 mt-2 space-y-4">
 						<div className="relative pl-4 p-2 rounded-lg bg-blue-50">
 							<span className="w-1 absolute left-0 top-0 rounded-full h-full bg-blue-300"></span>
 							<div className="space-y-2.5">
@@ -146,8 +196,8 @@ function HighlightCard() {
 									showValueLabel
 								/>
 								<div className="flex justify-between">
-									<p className="text-blue-500 bg-blue-100 px-2 rounded-lg flex items-center gap-2.5">
-										<CalendarDays size={18} />
+									<p className="text-blue-500 bg-blue-100 px-2 text-xs rounded-lg flex items-center gap-2.5">
+										<CalendarDays size={16} />
 										Aug, 23
 									</p>
 									<Button

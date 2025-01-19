@@ -15,7 +15,7 @@ const chartData = [
 
 const chartConfig = {
 	visitors: {
-		label: "Attendances",
+		label: "Check-Ins",
 	},
 	safari: {
 		label: "Safari",
@@ -69,7 +69,7 @@ export function RadialChart({ className }: ChartProps) {
 											y={(viewBox.cy || 0) + 24}
 											className="fill-muted-foreground"
 										>
-											Attendances
+											Check In
 										</tspan>
 									</text>
 								);

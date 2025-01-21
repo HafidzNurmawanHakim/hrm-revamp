@@ -32,27 +32,27 @@ import { usePathname } from "next/navigation";
 const items = [
 	{
 		title: "Home",
-		url: "",
+		url: "/",
 		icon: Home,
 	},
 	{
 		title: "Projects",
-		url: "projects",
+		url: "/projects",
 		icon: FolderKanban,
 	},
 	{
 		title: "Schedule",
-		url: "schedule",
+		url: "/schedule",
 		icon: CalendarDays,
 	},
 	{
 		title: "Message",
-		url: "message",
+		url: "/message",
 		icon: MessageSquareMore,
 	},
 	{
 		title: "Settings",
-		url: "settings",
+		url: "/settings",
 		icon: Settings,
 	},
 ];
